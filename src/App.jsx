@@ -1,18 +1,23 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import SignupVolunteer from "./pages/signup-volunteer.jsx";
-import Login from "./pages/login.jsx";
-import SignupNGO from "./pages/signup-NGO.jsx";
+import React from 'react';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import HowItWorks from './components/HowItWorks';
+import Opportunities from './components/Opportunities';
+import Testimonials from './components/Testimonials';
+import Features from './components/Features';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        {/* default route -> signup */}
-        <Route path="/" element={<Navigate to="/signup" replace />} />
-        <Route path="/signup" element={<SignupVolunteer />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
-    </Router>
+    <div className="min-h-screen bg-white">
+      <Header />
+      <Hero />
+      <HowItWorks />
+      <Opportunities />
+      <Testimonials />
+      <Features />
+      <Footer />
+    </div>
   );
 }
 
